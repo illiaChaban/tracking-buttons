@@ -1,0 +1,27 @@
+{
+  "name": "tracking-buttons",
+  "version": "1.0.0",
+  "description": "buttons that track the number of times being pressed",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illiaChaban/tracking-buttons.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/illiaChaban/tracking-buttons/issues"
+  },
+  "homepage": "https://github.com/illiaChaban/tracking-buttons#readme"
+}
