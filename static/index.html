@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Bungee+Shade|Fruktur|Monoton|Pacifico" rel="stylesheet">
+
     <script src="socket.io/socket.io.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 
 </head>
 <body>
+    <h1>Real time button pressing website</h1>
 
 
     <div id='info'>
         <ul>
             <li>Users online: 1</li>
-            <li>All time unique users: 1</li>
+            <li>All time unique visitors: 1</li>
             <li>All time visits: 1</li>
         </ul>
         <div>Only you can see that:</div>
@@ -26,16 +30,26 @@
 
     </div>
 
-    <h1 class='title'>Press button you like!</h1>
+    <h3 class='title'>Press button you like!</h1>
     <div id='buttons'>
         <div id='main-btn-1-outside'>
             <button id='main-btn-1'>Press<br>me!</button>
         </div>
         <div id='main-btn-2-outside'>
-            <button id='main-btn-2' class='runForward'>Press me!</button>
+            <button id='main-btn-2' class='runForward'></button>
+            <div id='main-btn-2-sign'>
+                <span>P</span><span>r</span><span>e</span><span>s</span><span>s</span> 
+                <span>m</span><span>e</span><span>!</span>
+            </div>
         </div>
-        <button id='main-btn-3'>DON'T press me!</button>
-
+        <div id='main-btn-3-outside'>
+            <button id='main-btn-3'>
+                <div><div>Press me!</div></div>
+            </button>
+            <div id='main-btn-3-wings'>
+                <div id='main-btn-3-wings-inside'></div>
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -67,5 +81,6 @@
 
 
     <script src="main.js"></script>
+    <script src="animate2btnSign.js"></script>
 </body>
 </html>

@@ -1,5 +1,18 @@
 html {
+    width: 100%;
+    height: 100%;
     background-color: rgb(199, 202, 157);
+    /* background-color: rgb(233, 247, 38); */
+    background: linear-gradient(to bottom,
+            rgba(135,224,253,1) 0%,
+            rgb(41, 160, 196) 40%,
+            rgb(7, 106, 139) 100%);
+    background-size: cover;
+    /* font-family: 'Pacifico', cursive;
+    font-family: 'Bungee Shade', cursive;
+    font-family: 'Fruktur', cursive;
+    font-family: 'Monoton', cursive;
+    font-family: 'Black Ops One', cursive; */
 }
 
 .title {
@@ -11,11 +24,10 @@ html {
     display: flex;
     min-width: 600px;
     justify-content: space-evenly;
-    /* position: absolute; */
-    /* top: calc(100vh/2 - 75px); */
 }
 
 button {
+    cursor: pointer;
     outline: none;
 }
 
@@ -30,15 +42,6 @@ ul li{
 }
 
 /* 1st BUTTON */
-@keyframes changeColor {
-    0% { background-color: rgb(23, 182, 2); }
-    20% { background-color: rgb(238, 194, 0); }
-    40% { background-color: rgb(255, 115, 0); }
-    60% { background-color: rgb(255, 0, 0); }
-    80% { background-color: rgb(7, 141, 194); }
-    100% { background-color: rgb(23, 182, 2); }
-}
-
 #main-btn-1 {
     position: relative;
     left: 30px;
@@ -156,6 +159,13 @@ ul li{
     }
 }
 
+/* @keyframes changeFontColor {
+    0% { color: blue }
+    25% { color: yellow }
+    50% { color: green }
+    75% { color: yellowgreen }
+} */
+
 #main-btn-2 {
     width: 110px;
     height: 150px;
@@ -163,7 +173,69 @@ ul li{
     border-radius: 10px;
     transform: translate( 0 , calc(80px/2));
     background: url('./runningMan.png');
+}
+
+#main-btn-2-sign {
+    position: relative;
+    top: 30px;
+    font-family: 'Fruktur', cursive;
+    font-size: 30px;
+    transition: all 1s ease-in-out;
+    line-height: 4rem;
+}
+
+#main-btn-2-sign > span {
+    display: inline-block;
+}
+
+
+@keyframes tada {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    10%, 20% {
+        -webkit-transform: scale3d(.9,.9,.9) rotate(-3deg);
+        transform: scale3d(.9,.9,.9) rotate(-3deg);
+    }
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1,1.1,1.1) rotate(3deg);
+        transform: scale3d(1.1,1.1,1.1) rotate(3deg);
+    }
+    40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1,1.1,1.1) rotate(-3deg);
+        transform: scale3d(1.1,1.1,1.1) rotate(-3deg);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
     
+    50% {
+        -webkit-transform: scale3d(1.15,1.15,1.15);
+        transform: scale3d(1.15,1.15,1.15);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+.tada {
+    -webkit-animation: tada 1s;
+    animation: tada 1s;
+}
+
+.pulse {
+    -webkit-animation: pulse 0.5s;
+    animation: pulse 0.5s;
 }
 
 .runForward {
@@ -194,35 +266,139 @@ ul li{
 
 
 /* 3rd BUTTON */
+@keyframes rotateHue{
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#main-btn-3-outside{
+    width: 200px;
+    height: 200px;
+    position: relative;
+
+}
+
+@keyframes tada-delay-6s {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    1.66%, 3.33% {
+        -webkit-transform: scale3d(.9,.9,.9) rotate(-3deg);
+        transform: scale3d(.9,.9,.9) rotate(-3deg);
+    }
+    5%, 8.33%, 11.66%, 15% {
+        -webkit-transform: scale3d(1.1,1.1,1.1) rotate(3deg);
+        transform: scale3d(1.1,1.1,1.1) rotate(3deg);
+    }
+    6.66%, 10%, 13.33% {
+        -webkit-transform: scale3d(1.1,1.1,1.1) rotate(-3deg);
+        transform: scale3d(1.1,1.1,1.1) rotate(-3deg);
+    }
+    16.66% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
 #main-btn-3{
-    background-color: red;
-    /* position: absolute; */
-    height:150px;
+    font-family: 'Monoton', cursive;
+
+
+
+
+    /* font-weight: 600; */
+    font-size: 30px;
+    color: #ff6d41;
+
+    z-index: 1;
+    position: absolute;
+    outline: none;
+    height: 150px;
     width: 150px;
     border-radius: 50%;
-    /* top: calc(100vh/2 ); */
-    /* right: calc( 100vw / 2); */
-    box-shadow: 10px 10px 4px rgb(18, 92, 250);
-    transition: all .2s ease-in-out ;
-    border: 2px solid rgba(62, 151, 252, 0.473);
+    top: 25px;
+    left: 25px;
+    border: none;
+    /* background-color: rgb(63, 172, 206); */
+    background: linear-gradient(to bottom,
+            /* rgba(135,224,253,1) 0%, */
+            rgb(58, 176, 212) 0%,
+            rgb(43, 152, 189) 100%);
+            /* rgb(41, 160, 199) 100%); */
 
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffbf+0,e5ff91+24,aaffad+52,9cf4fc+77,60abe5+100 */
-    background: #ffffbf; /* Old browsers */
-    background: -moz-linear-gradient(-45deg, #ffffbf 0%, #e5ff91 24%, #aaffad 52%, #9cf4fc 77%, #60abe5 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, #ffffbf 0%,#e5ff91 24%,#aaffad 52%,#9cf4fc 77%,#60abe5 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, #ffffbf 0%,#e5ff91 24%,#aaffad 52%,#9cf4fc 77%,#60abe5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffbf', endColorstr='#60abe5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    /* background: red; */
+    /* background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; */
+
+
 }
 
-#main-btn-3.pressed {
-    /* background-color: blue !important; */
-    box-shadow: 2px 2px 4px  rgb(18, 92, 250) !important;
-    transform: translate( 10px, 10px);
-    /* border: 1px solid black; */
+#main-btn-3 > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    animation: tada-delay-6s 1s infinite;
+
 }
-  
+
+#main-btn-3 > div > div {
+    /* background: linear-gradient(to bottom right, #f22, #f2f 14.25%, #22f 28.5%, #2ff 42.75%, #2f2 57%, #2f2 71.25%, #ff2 85.5%, #f22);; */
+    background: linear-gradient(to bottom, rgba(254,187,187,1) 0%,rgba(254,144,144,1) 45%,rgba(255,92,92,1) 100%);
+    
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rotateHue 20s infinite;
+
+}
 
 
+@keyframes rotator{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(1440deg); }
+} 
+
+#main-btn-3-wings{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+#main-btn-3-wings-inside {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, 
+                                transparent 0%,
+                                transparent 30%,
+                                rgb(20, 235, 135) 30%,
+                                rgb(232, 235, 20) 70%, 
+                                transparent 70%, 
+                                transparent 100%);
+    animation: rotateHue 20s infinite;
+}
+
+#main-btn-3-wings.pressed {
+    animation: rotator 2.5s ease-in-out ;
+}
+
+
+
+
+.heartbeat {
+    display: inline-block;
+    animation: tada-delay-6s 1s infinite;
+}
 
 footer {
     position: absolute;
