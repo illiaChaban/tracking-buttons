@@ -1,0 +1,112 @@
+/* 3rd BUTTON */
+@keyframes rotateHue{
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+@keyframes rotator{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(1440deg); }
+} 
+
+#main-btn-3-outside{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+@keyframes heartbeat {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    1.66%, 3.33% {
+        -webkit-transform: scale3d(.9,.9,.9) rotate(-3deg);
+        transform: scale3d(.9,.9,.9) rotate(-3deg);
+    }
+    5%, 8.33%, 11.66%, 15% {
+        -webkit-transform: scale3d(1.1,1.1,1.1) rotate(3deg);
+        transform: scale3d(1.1,1.1,1.1) rotate(3deg);
+    }
+    6.66%, 10%, 13.33% {
+        -webkit-transform: scale3d(1.1,1.1,1.1) rotate(-3deg);
+        transform: scale3d(1.1,1.1,1.1) rotate(-3deg);
+    }
+    16.66% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+.heartbeat {
+    display: inline-block;
+    animation: heartbeat 1s infinite;
+}
+
+#main-btn-3{
+    position: absolute;
+    font-family: 'Monoton', cursive;
+
+    font-size: 30px;
+    color: #ff6d41;
+
+    z-index: 1;
+    position: absolute;
+    outline: none;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    top: 25px;
+    left: 25px;
+    border: none;
+
+    background: radial-gradient(ellipse at center, 
+        rgb(1, 163, 139) 0%,
+        rgb(34, 155, 177) 55%,
+        rgba(43, 155, 184, 0.5) 70%,
+        rgba(125,185,232,0) 100%);
+}
+
+
+
+#main-btn-3 > div   {
+    background: rgb(254,252,234); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rotateHue 20s infinite, heartbeat 1s infinite;
+}
+
+#main-btn-3-wings{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+#main-btn-3-wings-inside {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, 
+                                transparent 0%,
+                                transparent 30%,
+                                rgb(20, 235, 135) 30%,
+                                rgb(232, 235, 20) 70%, 
+                                transparent 70%, 
+                                transparent 100%);
+    animation: rotateHue 20s infinite;
+}
+
+#main-btn-3-wings.pressed {
+    animation: rotator 2.5s ease-in-out ;
+}

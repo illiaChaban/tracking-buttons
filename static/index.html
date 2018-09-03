@@ -5,51 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Bungee+Shade|Fruktur|Monoton|Pacifico" rel="stylesheet">
 
     <script src="socket.io/socket.io.js"></script>
-
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 
 </head>
 <body>
-    <h1>Real time button pressing website</h1>
+    <h1 class='text-center'>Real-time button pressing app</h1>
 
 
-    <div id='info'>
-        <ul>
-            <li>Users online: 1</li>
+    <div class='info'>
+        <ul id='info-1' class='no-list-style'>
+            <li id='users-online'>Users online: <span>1</span></li>
             <li>All time unique visitors: 1</li>
             <li>All time visits: 1</li>
         </ul>
-        <div>Only you can see that:</div>
-        <ul>
-            <li>Your ip: </li>
-            <li>Your info: </li>
-        </ul>
+    </div>
+
+
+    <h3 class='title'>Press button you like!</h3>
+
+    <div id='buttons'>
+        <div class='btn-container'>
+            <div id='main-btn-1-outside'>
+                <button id='main-btn-1'>Press<br>me!</button>
+            </div>
+            <div class='btn-pressed-count'>2</div>
+        </div>
+
+        <div class='btn-container'>
+            <div id='main-btn-2-outside'>
+                <button id='main-btn-2' class='runForward'></button>
+                <div id='main-btn-2-sign'>
+                    <span>P</span><span>r</span><span>e</span><span>s</span><span>s</span> 
+                    <span>m</span><span>e</span><span>!</span>
+                </div>
+            </div>
+            <div class='btn-pressed-count' id='btn-pressed-count-2'>2</div>
+        </div>
+
+        <div class='btn-container'>
+            <div id='main-btn-3-outside'>
+                <button id='main-btn-3'>
+                    <div>Press me!</div>
+                </button>
+                <div id='main-btn-3-wings'>
+                    <div id='main-btn-3-wings-inside'></div>
+                </div>
+            </div>
+            <div class='btn-pressed-count'>2</div>
+        </div>
 
     </div>
 
-    <h3 class='title'>Press button you like!</h1>
-    <div id='buttons'>
-        <div id='main-btn-1-outside'>
-            <button id='main-btn-1'>Press<br>me!</button>
-        </div>
-        <div id='main-btn-2-outside'>
-            <button id='main-btn-2' class='runForward'></button>
-            <div id='main-btn-2-sign'>
-                <span>P</span><span>r</span><span>e</span><span>s</span><span>s</span> 
-                <span>m</span><span>e</span><span>!</span>
-            </div>
-        </div>
-        <div id='main-btn-3-outside'>
-            <button id='main-btn-3'>
-                <div><div>Press me!</div></div>
-            </button>
-            <div id='main-btn-3-wings'>
-                <div id='main-btn-3-wings-inside'></div>
-            </div>
-        </div>
+
+    <div class='text-center info move-down'>
+        <span>Only you can see that:*</span>
+        <ul id='info-2' class='no-list-style'>
+            <li>Your ip: <div>hello</div></li>
+            <li>Your info: </li>
+        </ul> 
     </div>
 
     <footer>
@@ -66,21 +81,7 @@
         
     </footer>
 
-    <div id='users-online'>Users online: 1</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="main.js"></script>
-    <script src="animate2btnSign.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animate2btnSign.js"></script>
 </body>
 </html>

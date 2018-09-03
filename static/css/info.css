@@ -1,0 +1,85 @@
+
+.info > ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.no-list-style{
+    list-style: none;
+}
+
+.info > ul li{
+    margin-right: 20px;
+}
+
+#users-online {
+    font-weight: 600;
+    border: 2px  solid;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: hsl(195, 79%, 11%);
+    transition: all .3s ease-in-out;
+    min-width: 102px;
+}
+
+@keyframes scale{
+    0% {
+        transform: scale3d(1,1,1);
+        -webkit-transform: scale3d(1,1,1)
+    }
+
+    60% {
+        transform: scale3d(1.5,1.5,1.5);
+        -webkit-transform: scale3d(1.4,1.4,1.4);
+    }
+
+    100% {
+        transform: scale3d(1,1,1);
+        -webkit-transform: scale3d(1,1,1);
+    }
+}
+
+#users-online.add-user-online{
+    background: hsl(195, 79%, 11%);
+    border: 2px hsl(195, 79%, 11%) solid;
+    color: rgb(58, 207, 194);
+}
+
+
+
+#users-online.add-user-online > span {
+    display: inline-block;
+    color: rgb(117, 255, 75);
+    /* transform: scale3d(1.4,1.4,1.4); */
+    /* -webkit-transform: scale3d(1.15,1.15,1.15); */
+    /* animation: pulse .3s ; */
+    animation: scale 1s;
+}
+
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 230px;
+}
+
+.btn-pressed-count {
+    margin-top: 10px;
+    font-family: 'Bungee Shade', cursive;
+    transition: color .3s;
+}
+
+#btn-pressed-count-2 {
+    position: relative;
+    top: 15px;
+}
+
+.btn-pressed-count.pressed {
+    animation: scale 1s;
+    color: rgb(117, 255, 75);
+}
